@@ -1,6 +1,6 @@
 # 📦 Multi-Package Installer
 
-A robust Bash script to **install multiple packages efficiently*- with support for both **interactive input*- and **command-line arguments**, along with advanced logging and safety checks.
+A robust Bash script to **install multiple packages efficiently** - with support for both **interactive input*- and **command-line arguments**, along with advanced logging and safety checks.
 
 ---
 
