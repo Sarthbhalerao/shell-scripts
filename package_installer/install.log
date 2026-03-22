@@ -1,0 +1,42 @@
+2026-03-22 08:39:48 - Please run as root
+2026-03-22 08:40:11 - Updating package list...
+Hit:1 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble InRelease
+Get:2 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:3 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:4 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1841 kB]
+Get:5 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [177 kB]
+Get:6 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1568 kB]
+Get:7 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [386 kB]
+Get:8 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
+Get:9 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+Get:10 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [7368 B]
+Get:11 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [13.1 kB]
+Get:12 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [216 B]
+Get:13 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+Get:14 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:15 http://security.ubuntu.com/ubuntu noble-security/main amd64 Components [21.5 kB]
+Get:16 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [74.3 kB]
+Get:17 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Components [212 B]
+Get:18 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [212 B]
+Fetched 4470 kB in 2s (2445 kB/s)
+Reading package lists...
+2026-03-22 08:40:22 - git is already installed
+2026-03-22 08:40:22 - nginx is already installed
+2026-03-22 08:40:22 - Installation process completed.
+2026-03-22 08:41:14 - Updating package list...
+Hit:1 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:3 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu noble-security InRelease
+Reading package lists...
+2026-03-22 08:41:16 - nginx is already installed
+2026-03-22 08:41:16 - Installation process completed.
+2026-03-22 08:41:19 - Updating package list...
+Hit:1 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:3 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu noble-security InRelease
+Reading package lists...
+2026-03-22 08:41:21 - nginx is already installed
+2026-03-22 08:41:21 - Installation process completed.
+2026-03-22 08:41:27 - No packages provided. Exiting.
