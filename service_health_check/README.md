@@ -59,22 +59,20 @@ No services provided. Usage: ./health_check.sh nginx docker
 ## 📊 Sample Output
 
 ```
-2026-03-22 09:07:13 - -------- Service Health check started --------
-
-2026-03-22 09:07:13 - Checking service: nginx
-2026-03-22 09:07:13 - nginx is running
-----------------------------------------
-
-2026-03-22 09:07:13 - Checking service: docker
-2026-03-22 09:07:13 - ALERT: docker is not running
-----------------------------------------
-
-2026-03-22 09:07:13 - System uptime:
- 09:07:13 up 2 days,  4:21,  1 user
-
-2026-03-22 09:07:13 - Summary: Running=1 | Not Running=1 | Not Found=0
-
-2026-03-22 09:07:13 - -------- Health check completed --------
+2026-03-22 09:23:45 - -------- Service Health check started --------
+2026-03-22 09:23:45 - Checking service: nginx
+2026-03-22 09:23:45 - nginx is running
+2026-03-22 09:23:45 - ----------------------------------------
+2026-03-22 09:23:45 - Checking service: docker
+2026-03-22 09:23:45 - docker is running
+2026-03-22 09:23:45 - ----------------------------------------
+2026-03-22 09:23:45 - Checking service: ssh
+2026-03-22 09:23:45 - ssh is running
+2026-03-22 09:23:45 - ----------------------------------------
+2026-03-22 09:23:45 - System uptime:
+ 09:23:45 up  1:24,  3 users,  load average: 0.00, 0.00, 0.00
+2026-03-22 09:23:45 - Summary: Running=3 | Not Running=0 | Not Found=0
+2026-03-22 09:23:45 - -------- Health check completed --------
 ```
 
 ---
