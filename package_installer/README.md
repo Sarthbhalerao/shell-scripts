@@ -1,6 +1,6 @@
 # 📦 Multi-Package Installer
 
-A robust Bash script to **install multiple packages efficiently** with support for both **interactive input** and **command-line arguments**, along with logging and safety checks.
+A robust Bash script to **install multiple packages efficiently*- with support for both **interactive input*- and **command-line arguments**, along with advanced logging and safety checks.
 
 ---
 
@@ -8,29 +8,33 @@ A robust Bash script to **install multiple packages efficiently** with support f
 
 This script automates package installation on Debian-based systems using `apt-get`. It is designed to handle real-world scenarios by supporting:
 
-* Multiple package installation
-* Logging with timestamps
-* Root privilege validation
-* Flexible input methods (interactive + arguments)
+- Multiple package installation
+- Timestamp-based logging
+- Automatic log file creation
+- Log rotation for old files
+- Root privilege validation
+- Flexible input methods (interactive + arguments)
 
 ---
 
 ## ⚙️ Features
 
-* 📦 Install multiple packages in one command
-* 🧠 Supports both interactive and argument-based input
-* 📝 Logs all operations with timestamps
-* 🔐 Ensures script runs with root privileges
-* 🔄 Automatically updates package list before installation
-* ⚡ Safe Bash practices (`set -euo pipefail`)
+- Install multiple packages in one command
+- Supports both interactive and argument-based input
+- Logs all operations with timestamps
+- Automatically creates log files with timestamps
+- Log rotation (removes logs older than 7 days)
+- Ensures script runs with root privileges
+- Automatically updates package list before installation
+- Safe Bash practices (`set -euo pipefail`)
 
 ---
 
 ## 🛠️ Tech Stack
 
-* Bash Scripting
-* Linux (Debian/Ubuntu)
-* APT Package Manager
+- Bash Scripting
+- Linux (Debian/Ubuntu)
+- APT Package Manager
 
 ---
 
@@ -68,52 +72,74 @@ sudo ./install.sh nginx git curl docker.io
 
 ## 📊 Logging
 
-All operations are logged in:
+- Logs are stored in:
 
-```id="c5y7sh"
-install.log
+```
+./logs/
 ```
 
-Example log:
+- Each execution creates a new timestamped log file:
 
-```id="u1u1k9"
-2026-03-22 08:39:48 - Please run as root
-2026-03-22 08:40:11 - Updating package list...
+```
+logs/install_YYYY-MM-DD_HH-MM-SS.log
+```
+
+---
+
+### 🧾 Sample Log
+
+```
+2026-03-22 09:42:49 - -------- Package Installation Started --------
+2026-03-22 09:42:49 - Updating package list...
 Hit:1 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble InRelease
-Get:2 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
-Get:3 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
-Get:4 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1841 kB]
-Get:5 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [177 kB]
-Get:6 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1568 kB]
-Get:7 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [386 kB]
-Get:8 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
-Get:9 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+Hit:2 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:3 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu noble-security InRelease
+Reading package lists...
+2026-03-22 09:42:52 - nginx is already installed
+2026-03-22 09:42:52 - docker.io is already installed
+2026-03-22 09:42:52 - Installation process completed.
 ```
+
+---
+
+## 🧹 Log Rotation
+
+Old log files are automatically removed:
+
+```bash
+find logs/ -type f -name "*.log" -mtime +7 -delete
+```
+
+- Removes logs older than **7 days**
+- Keeps log directory clean and manageable
 
 ---
 
 ## 🧠 How It Works
 
-* If no arguments are passed → prompts user for input
-* If arguments are provided → installs directly
-* Checks if package is already installed using `dpkg -s`
-* Updates package list before installation
-* Logs every step with timestamps
+- If no arguments are passed → prompts user for input
+- If arguments are provided → installs directly
+- Checks if package is already installed using `dpkg -s`
+- Updates package list before installation
+- Creates a new timestamped log file for each run
+- Deletes old logs automatically (7-day retention)
 
 ---
 
 ## ⚠️ Requirements
 
-* Debian-based system (Ubuntu, etc.)
-* Root privileges
+- Debian-based system (Ubuntu, etc.)
+- Root privileges
+
 ---
 
 ## 💡 Use Cases
 
-* DevOps automation
-* Server provisioning scripts
-* CI/CD pipelines
-* Local development setup
+- DevOps automation
+- Server provisioning scripts
+- CI/CD pipelines
+- Local development setup
 
 ---
 

@@ -1,0 +1,10 @@
+2026-03-22 09:42:49 - -------- Package Installation Started --------
+2026-03-22 09:42:49 - Updating package list...
+Hit:1 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:3 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu noble-security InRelease
+Reading package lists...
+2026-03-22 09:42:52 - nginx is already installed
+2026-03-22 09:42:52 - docker.io is already installed
+2026-03-22 09:42:52 - Installation process completed.

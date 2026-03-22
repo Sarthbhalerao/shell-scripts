@@ -2,13 +2,29 @@
 
 set -euo pipefail
 
-LOGFILE="./install.log"
+# Create logs directory
+LOG_DIR="./logs"
+mkdir -p "$LOG_DIR"
+
+# Timestamped logfile
+TIMESTAMP=$(date '+%Y-%m-%d_%H-%M-%S')
+LOGFILE="$LOG_DIR/install_$TIMESTAMP.log"
+
 
 # Logging Function
-
 write_log() {
     echo "$(date '+%Y-%m-%d %H:%M:%S') - $*" | tee -a "$LOGFILE"
 }
+
+# Log rotation (delete logs older than 7 days)
+rotate_logs() {
+    find "$LOG_DIR" -type f -name "*.log" -mtime +7 -delete
+}
+
+# Run log rotation early
+rotate_logs
+
+write_log "-------- Package Installation Started --------"
 
 # Check if running as a root
 
@@ -18,6 +34,7 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 # Input handling
+
 if [ "$#" -eq 0 ]; then
     read -p "Enter packages (space-separated): " -a packages
 else
@@ -25,6 +42,7 @@ else
 fi
 
 # Empty check
+
 if [ "${#packages[@]}" -eq 0 ]; then
     write_log "No packages provided. Exiting."
     exit 1
