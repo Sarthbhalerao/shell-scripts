@@ -1,0 +1,6 @@
+2026-03-22 11:05:46 - --------------- BACKUP STARTED ---------------
+2026-03-22 11:05:46 - Creating backup: /home/ubuntu/backup/backup_2026-03-22_11-05-46.tar.gz
+tar: Removing leading `/' from member names
+2026-03-22 11:05:46 - Backup created successfully at path /home/ubuntu/backup/backup_2026-03-22_11-05-46.tar.gz
+2026-03-22 11:05:46 - Backup size: 72K
+2026-03-22 11:05:46 - --------------- BACKUP COMPLETED ---------------
