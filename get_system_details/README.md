@@ -1,6 +1,6 @@
 # 🖥️ Get System Information
 
-A structured Bash script that generates a **detailed system information report** - including system details, resource usage, and top processes, with **timestamped logging*- and **automatic log rotation**.
+A structured Bash script that generates a **detailed system information report** - including system details, resource usage, and top processes, with **timestamped logging** - and **automatic log rotation**.
 
 ---
 
